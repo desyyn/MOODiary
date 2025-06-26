@@ -124,3 +124,15 @@ _modules/*
 
 /results/
 /phpunit*.xml
+
+.env
+writable/*
+!writable/index.html
+vendor/
+*.log
+*.sqlite
+*.bak
+*.sql
+.idea/
+.vscode/
+.env.*
