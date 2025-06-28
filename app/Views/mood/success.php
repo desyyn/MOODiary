@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Log Berhasil!</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            padding-top: 80px;
-        }
-        .emoji {
-            font-size: 5rem;
-        }
-        .button {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #6c63ff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Berhasil Dicatat! – MOODiary</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="emoji"><?= $mood['emoji'] ?? '🌟' ?></div>
-    <h2>Mood kamu hari ini: <?= $mood['nama_mood'] ?? 'Tidak diketahui' ?></h2>
-    <p><?= esc($mood['catatan']) ?: 'Semoga harimu menyenangkan!' ?></p>
+<body class="success-page-v2">
 
-    <a class="button" href="/mood/history">Lihat Riwayat Mood</a>
+    <div class="confetti-bg"></div>
+
+    <div class="success-wrapper">
+        <div class="emoji-bounce"><?= $mood['emoji'] ?? '🌟' ?></div>
+        <h2 class="success-title">Yeay! Mood baru kamu sudah tercatat 🎉</h2>
+        <p class="mood-today">Mood hari ini: <span><?= $mood['nama_mood'] ?? 'Tidak diketahui' ?></span></p>
+        <p class="mood-note"><?= esc($mood['catatan']) ?: 'Semoga harimu menyenangkan!' ?></p>
+        <p class="quote">"Setiap emosi itu berharga 💖"</p>
+
+        <a href="/mood/history" class="btn-history">Lihat Riwayat Mood</a>
+    </div>
+
 </body>
 </html>
